@@ -1,15 +1,16 @@
 import os
 import pandas as pd
 from sqlalchemy import create_engine, text
+from pathlib import Path
 
 # 1. Configuration & Paths
-cleaned_data_path = r"C:\Users\Amir\Documents\GitHub\Olist-Churn-CLV-Analytics\data\cleaned"
+cleaned_data_path = "data/cleaned"
 
-DB_USER = "postgres"
-DB_PASS = "893758"  # Replace with the password you set during installation
-DB_HOST = "localhost"
-DB_PORT = "5432"
-DB_NAME = "olist_analytics"
+DB_USER = os.getenv("DB_USER")
+DB_PASS = os.getenv("DB_PASS")  # Replace with the password you set during installation
+DB_HOST = os.getenv("DB_HOST")
+DB_PORT = os.getenv("DB_PORT")
+DB_NAME = os.getenv("DB_NAME")
 
 print("--- Step 1: Checking/Creating Target Database ---")
 # Connect to the default 'postgres' database first to execute management commands
