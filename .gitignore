@@ -1,26 +1,59 @@
-# ==========================================
-# Data Files (Exclude all generated & raw data)
-# ==========================================
-data/raw/
-data/cleaned/
-data/analytics/
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+env/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# =========================
+# Environment Variables
+# =========================
+.env
+
+# =========================
+# Power BI
+# =========================
+*.pbix
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Raw Datasets (Do NOT upload)
+# =========================
+data/olist_customers_dataset.csv
+data/olist_orders_dataset.csv
+data/olist_order_items_dataset.csv
+data/olist_order_payments_dataset.csv
+data/olist_order_reviews_dataset.csv
+data/olist_products_dataset.csv
+data/olist_sellers_dataset.csv
+data/olist_geolocation_dataset.csv
+data/product_category_name_translation.csv
+
+# =========================
+# Generated Power BI Dataset
+# =========================
 data/powerbi/
 
-# Hide loose CSV files in the root of data directory
-data/*.csv
-
-# ==========================================
-# Power BI Cache & Auto-Recovery (Optional but safe)
-# ==========================================
-*.tmp
-*.backup
-
-# ==========================================
-# Python Environment & System Files
-# ==========================================
-__pycache__/
-*.pyc
-.venv/
-venv/
-.env
-.DS_Store
+# =========================
+# Optional Large Intermediate Files
+# Uncomment if you don't want them in GitHub
+# =========================
+# data/analytics/churn_dataset.csv
