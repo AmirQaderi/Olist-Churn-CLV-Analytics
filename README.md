@@ -35,6 +35,17 @@ E-commerce companies often struggle to answer key questions:
 
 This project addresses these challenges through predictive analytics and customer segmentation techniques that support data-driven retention strategies.
 
+## Data Source
+
+The analysis is based on the Olist Brazilian E-Commerce Dataset published on Kaggle.
+
+Citation:
+
+Olist Store Dataset, Kaggle:
+https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+
+This dataset contains approximately 100,000 orders placed between 2016 and 2018 and includes customer, order, payment, product, review, seller, and geolocation information.
+
 ## Tech Stack
 
 ### Programming Language
