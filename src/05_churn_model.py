@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler  # Added for feature scaling
 from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.metrics import roc_auc_score
 
 # Define dynamic workspace paths
 base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -44,6 +45,10 @@ print("--- Step 5.5 & 5.6: Evaluating Model Performance ---")
 y_pred = model.predict(X_test_scaled)
 print("\nClassification Report:")
 print(classification_report(y_test, y_pred))
+
+# Step 5.7: Calculate ROC-AUC score based on predicted probabilities
+auc_score = roc_auc_score(y_test, model.predict_proba(X_test_scaled)[:, 1])
+print(f"ROC-AUC Score: {auc_score:.4f}")
 
 # Step 5.8: Generate Churn Probabilities Matrix safely using Scaled Features
 print("--- Step 5.8: Mapping Scaled Churn Probabilities back to Profiles ---")
