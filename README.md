@@ -12,6 +12,8 @@ The project demonstrates the complete analytics workflow:
 - CLV Analysis
 - Interactive Power BI Dashboards
 
+---
+
 ## Project Overview
 
 Customer retention is one of the most important challenges in e-commerce. Identifying customers who are likely to stop purchasing and understanding their long-term value can significantly improve marketing effectiveness and revenue growth.
@@ -24,6 +26,8 @@ This project builds a complete analytics solution that transforms raw transactio
 - Customer lifetime value distribution
 - Retention priorities
 
+---
+
 ## Business Problem
 
 E-commerce companies often struggle to answer key questions:
@@ -35,6 +39,8 @@ E-commerce companies often struggle to answer key questions:
 
 This project addresses these challenges through predictive analytics and customer segmentation techniques that support data-driven retention strategies.
 
+---
+
 ## Data Source
 
 The analysis is based on the Olist Brazilian E-Commerce Dataset published on Kaggle.
@@ -45,6 +51,8 @@ Olist Store Dataset, Kaggle:
 https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 This dataset contains approximately 100,000 orders placed between 2016 and 2018 and includes customer, order, payment, product, review, seller, and geolocation information.
+
+---
 
 ## Tech Stack
 
@@ -89,6 +97,8 @@ This dataset contains approximately 100,000 orders placed between 2016 and 2018 
 - Git
 - GitHub
 
+---
+
 ## Project Structure
 
 ```text
@@ -98,6 +108,7 @@ sql/         → PostgreSQL data loading scripts
 src/         → Data processing and machine learning pipeline
 README.md    → Project documentation
 ```
+---
 
 ## Key Features
 
@@ -119,6 +130,8 @@ Calculated customer value metrics and identified high-value customer segments.
 ### Power BI Dashboard
 Designed interactive dashboards for churn analysis, customer segmentation, and CLV monitoring.
 
+---
+
 ## Dashboard Preview
 
 ### Executive Overview
@@ -137,6 +150,8 @@ Designed interactive dashboards for churn analysis, customer segmentation, and C
 
 ![CLV Analysis](dashboard/screenshots/4.%20clv_analysis.png)
 
+---
+
 ## Results
 
 The project provides:
@@ -149,6 +164,8 @@ The project provides:
 
 These insights can support retention campaigns, customer prioritization, and marketing decision-making.
 
+---
+
 ## Resume Highlights
 
 - Built an end-to-end customer analytics solution using Python, PostgreSQL, and Power BI.
@@ -157,6 +174,32 @@ These insights can support retention campaigns, customer prioritization, and mar
 - Designed interactive Power BI dashboards for churn, CLV, and retention analytics.
 - Automated data cleaning and database loading workflows using Python and SQLAlchemy.
 
+---
+
+## Project Ecosystem: Data Engineering vs. Data Science
+
+This repository represents the **Data Engineering (Infrastructure & Pipeline)** core of a complete data ecosystem, designed to run in tandem with a companion Data Science repository that handles advanced downstream analysis.
+
+| Project | Role | Primary Tech Stack | Focus |
+| :--- | :--- | :--- | :--- |
+| **Olist-Churn-CLV-Analytics** (this repo) | Data Science & Analytics | Python, Scikit-Learn, Power BI | Churn Prediction, RFM Segmentation, CLV Modeling |
+| **[Olist Modern Data Stack](https://github.com/AmirQaderi/olist-modern-data-stack)** | Data Engineering | Airflow, dbt, PostgreSQL, Docker | Ingestion, Star-Schema Modeling, Orchestration, SSOT |
+
+**How they connect:**
+
+1. **The Infrastructure ([Olist Modern Data Stack](https://github.com/AmirQaderi/olist-modern-data-stack))** — Processes raw transactional data, structures it into optimized star-schema tables, and produces clean analytical marts (`analytics_rfm` and `analytics_churn_features`).
+2. **The Intelligence (this repo)** — Picks up where this pipeline finishes. Utilizes the prepared data marts to train machine learning models and perform deep statistical customer lifecycle analysis.
+
+---
+
+## Author
+
+**Amirhossein Qaderi** — Data Engineer | Data Analyst
+
+[LinkedIn](https://www.linkedin.com/in/amir-hossein-qaderi-758a5017a/) · [GitHub](https://github.com/AmirQaderi)
+
+---
+
 ## License
 
-This project is distributed under the MIT License. See the LICENSE file for more information.
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
