@@ -2,9 +2,6 @@
 
 An end-to-end Data Analytics project that combines customer segmentation, churn prediction, and customer lifetime value (CLV) analysis using the Olist Brazilian E-Commerce dataset.
 
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=power-bi&logoColor=black)](https://powerbi.microsoft.com/)
-
 The project demonstrates the complete analytics workflow:
 
 - Data Cleaning & Transformation
@@ -14,6 +11,9 @@ The project demonstrates the complete analytics workflow:
 - Customer Churn Prediction
 - CLV Analysis
 - Interactive Power BI Dashboards
+
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=power-bi&logoColor=black)](https://powerbi.microsoft.com/)
 
 ---
 
